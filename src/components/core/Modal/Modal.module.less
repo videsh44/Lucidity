@@ -1,0 +1,74 @@
+@modal-bg: rgba(0, 0, 0, 0.5);
+@modal-color: hsl(75deg 4.88% 16.08%);
+@modal-padding: 20px;
+@border-radius: 8px;
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: @modal-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: @modal-color;
+    padding: @modal-padding;
+    border-radius: @border-radius;
+    width: 600px;
+    max-width: 90%;
+    position: relative;
+}
+
+.modalTitle {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.modalBody {
+    margin-top: 10px;
+}
+
+.modalFooter {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.closeButton {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    background: hsl(90deg 2.56% 15.29%);
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: hsl(71.65deg 100% 66.67%);
+    padding: 0px 8px;
+    font-weight: 300;
+}
+
+.cancelButton {
+    background:none;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 8px;
+    color: hsl(71.89deg 44.94% 48.43%);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.saveButton {
+    background: hsl(80deg 2.26% 26.08%);
+    border: none;
+    padding: 8px 16px;
+    color: hsl(80deg 1.51% 39.02%);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+}

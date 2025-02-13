@@ -1,0 +1,54 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 32px;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    background-color: hsl(240deg 5.71% 13.73%);
+
+    &__headerTag {
+        padding: 8px 16px;
+        background: #000;
+        border-radius: 12px;
+        color:hsl(70.34deg 35.22% 48.43%);
+        font-weight: 300;
+    }
+  
+    th, td {
+      padding: 20px;
+      text-align: left;
+      border-bottom: 1px solid #444;
+    }
+  
+    th {
+      background: hsl(240deg 5.71% 13.73%);
+    }
+  
+    td {
+      background: hsl(240deg 5.71% 13.73%);
+      font-weight: 300;
+    }
+  
+    .icon {
+      cursor: pointer;
+      margin-right: 10px;
+      transition: transform 0.2s;
+
+      &__disabled {
+        path {
+            fill: #444;
+        }
+      }
+  
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  
+  
