@@ -47,11 +47,13 @@ export const inventorySlice = createSlice({
     },
     editProduct: (state, action: PayloadAction<ProductWithIndex>) => {
       const { index, ...rest } = action.payload;
+      const numericPrice = parseFloat(rest.price.replace("$", "")) || 0;
       state.products = state.products.map((product, proIndx) => {
         if(proIndx === index) {
           return {
             ...product,
-            ...rest
+            ...rest,
+            value: `$${numericPrice * rest.quantity}`,
           }
         }
         return product
