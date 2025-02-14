@@ -9,7 +9,7 @@ export const getTotalValue = (products: Product[]): number => {
 };
 
 export const getOutOfStock = (products: Product[]): number => {
-    return products.filter((product) => product.quantity === 0).length;
+    return products.filter((product) => product.quantity == 0).length;
 }
 
 export const getTotalCategories = (products: Product[]): number => {
